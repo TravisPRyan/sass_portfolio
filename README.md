@@ -1,2 +1,1 @@
-# sass_portfolio
-Push 1: Add homepage. Various styling improvements.
+Push 2: Add Menu and style.
