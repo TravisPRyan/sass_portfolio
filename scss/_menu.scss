@@ -1,5 +1,4 @@
-// Menu
-
+// Hamburger Menu
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -16,7 +15,7 @@
     @include easeOut;
   }
 
-  //transform menu button on click
+  //transform hamb on click
   &.close {
     transform: rotate(180deg);
 
@@ -26,6 +25,7 @@
         background-color: #218d01;
         transform: rotate(45deg) translate(5px, 5px);
       }
+      //remove from view
       &:nth-child(2) {
         opacity: 0;
       }
@@ -92,19 +92,19 @@
       border: solid 3px $secondary-color;
     }
   }
-  //eeeeeh
-  //   .nav-item {
-  //     transform: translate3d(600px, 0, 0);
-  //     @include easeOut;
 
-  //     &.show {
-  //       transform: translate3d(0, 0, 0);
-  //     }
+  .nav-item {
+    transform: translate3d(600px, 0, 0);
+    @include easeOut;
 
-  //     &.current > a {
-  //       color: $secondary-color;
-  //     }
-  //   }
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.current > a {
+      color: $secondary-color;
+    }
+  }
 
   .nav-link {
     display: inline-block;

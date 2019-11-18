@@ -60,6 +60,13 @@
       background: url("../img/portrait.jpg");
       border-radius: 50%;
       border: solid 3px #218d01; }
+  .menu .nav-item {
+    transform: translate3d(600px, 0, 0);
+    transition: all 0.5s ease-out; }
+    .menu .nav-item.show {
+      transform: translate3d(0, 0, 0); }
+    .menu .nav-item.current > a {
+      color: #218d01; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -99,14 +106,15 @@ body {
     background: url(../img/background.jpg);
     background-attachment: fixed;
     background-size: cover; }
-    body#bg-img .overlay {
+    body#bg-img:after {
+      content: "";
       position: absolute;
       top: 0;
       right: 0;
       width: 100%;
       height: 100%;
       z-index: -1;
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/background.jpg); }
+      background: rgba(68, 68, 68, 0.7); }
 
 h1,
 h2,
@@ -175,12 +183,56 @@ main {
     padding: 0.5rem;
     border-bottom: #218d01 5px solid; }
 
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #218d01;
+      color: #fff; }
+      .boxes div:hover span {
+        color: #fff; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #218d01;
+    color: #fff; }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
+
+.btn-light {
+  background: #c4c4c4;
+  color: #333; }
+
 #main-footer {
   text-align: center;
   padding: 1rem;
   background: #2b2b2b;
   color: #fff;
   height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -205,7 +257,7 @@ main {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
-      background: url("../ing/portrait_small.jpg");
+      background: url("../img/portrait_small.jpg");
       width: 150px;
       height: 150px; }
   .about-info {
@@ -213,5 +265,12 @@ main {
     grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; } }
+  main {
+    padding: 2rem; }
+    main #home h1 {
+      margin-top: 10vh; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem; }
+  .projects {
+    grid-template-columns: 1fr; } }
