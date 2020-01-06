@@ -1,1 +1,1 @@
-Push 8: Populate personal data.
+Push 8: Personalize Content.
