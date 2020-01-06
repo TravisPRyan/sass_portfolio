@@ -1,1 +1,1 @@
-Push 7: Implement projects page and styling.
+Push 8: Personalize Content.
