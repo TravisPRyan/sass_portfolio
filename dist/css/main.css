@@ -367,3 +367,27 @@ main#home h1 {
     grid-template-columns: 1fr;
   }
 }
+
+.studio_782 {
+  position: relative;
+  display: inline-block;
+  font-style: italic;
+}
+
+.studio_782 .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #218d01;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.studio_782:hover .tooltiptext {
+  visibility: visible;
+}
